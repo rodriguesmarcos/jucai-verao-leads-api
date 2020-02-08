@@ -11,6 +11,10 @@ const LeadRewardSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    photo: {
+      type: String,
+      required: true,
+    },
   },
   { _id: false }
 );

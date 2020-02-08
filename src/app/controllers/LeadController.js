@@ -55,11 +55,6 @@ class LeadController {
       $expr: { $lt: ['$given', '$qty'] },
     });
 
-    //
-    // if (!count) {
-    //   return res.status(400).json({ error: 'Acabaram os prémios' });
-    // }
-
     if (count) {
       const random = Math.floor(Math.random() * count);
       const reward = await Reward.findOne(
@@ -76,6 +71,7 @@ class LeadController {
       lead.reward = {
         reward_id: reward.id,
         name: reward.name,
+        photo: reward.photo,
       };
       await lead.save();
     }

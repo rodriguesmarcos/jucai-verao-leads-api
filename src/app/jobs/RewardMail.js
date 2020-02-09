@@ -11,7 +11,7 @@ class RewardMail {
 
     const mailData = {
       fail: {
-        subject: `Que pena ${name}! Os brindes acabaram :(.`,
+        subject: `Que pena ${name}! Os brindes acabaram :(`,
         template: 'reward-fail',
       },
       success: {

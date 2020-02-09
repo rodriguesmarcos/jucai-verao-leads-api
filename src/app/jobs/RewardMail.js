@@ -15,7 +15,7 @@ class RewardMail {
         template: 'reward-fail',
       },
       success: {
-        subject: `Parabéns ${name}, você ganhou um ${reward.name}`,
+        subject: `Parabéns ${name}, você ganhou um brinde`,
         template: 'reward-success',
       },
     };

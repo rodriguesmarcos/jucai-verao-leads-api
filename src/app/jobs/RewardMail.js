@@ -5,21 +5,17 @@ class RewardMail {
     return 'RewardMail';
   }
 
-  mailData(type) {
-    return mailData[type];
-  }
-
   async handle({ data }) {
     const { name, email, reward } = data.lead;
     const mailType = reward ? 'success' : 'fail';
 
     const mailData = {
       fail: {
-        subject: 'Você não ganhou um prêmio.',
+        subject: `Que pena ${name}! Os brindes acabaram :(.`,
         template: 'reward-fail',
       },
       success: {
-        subject: 'Você ganhou um prêmio.',
+        subject: `Parabéns ${name}, você ganhou um ${reward.name}`,
         template: 'reward-success',
       },
     };

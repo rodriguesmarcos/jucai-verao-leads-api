@@ -7,6 +7,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
+      authSource: 'admin',
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
